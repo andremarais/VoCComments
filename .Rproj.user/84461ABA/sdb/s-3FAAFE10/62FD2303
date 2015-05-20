@@ -1,0 +1,17 @@
+{
+    "contents" : "require(shiny)\n\nshinyUI(fluidPage(\n        titlePanel(\"VoC Comments\"),\n        # Row 1\n        fluidRow(\n          \n        column(3,\n               wellPanel(textOutput(\"wp1.t\"),\n                         plotOutput(\"wp1.p\", height = \"150px\"),\n                         style = if (voc[1,6] >= 9) \"border-color: green;\" else if \n                         (voc[1,6] >= 5 &  voc[1,6]< 9) \"border-color: orange;\" else \"border-color: red;\"\n                 )),\n        column(3,\n               wellPanel(textOutput(\"wp2.t\"),\n                         plotOutput(\"wp2.p\", height = \"150px\"),\n                         style = if (voc[2,6] >= 9) \"border-color: green;\" else if \n                         (voc[2,6] >= 5 &  voc[2,6]< 9) \"border-color: orange;\" else \"border-color: red;\"\n               )),\n        column(3,\n               wellPanel(textOutput(\"wp3.t\"),\n                         plotOutput(\"wp3.p\", height = \"150px\"),\n                         style = if (voc[3,6] >= 9) \"border-color: green;\" else if \n                         (voc[3,6] >= 5 &  voc[3,6]< 9) \"border-color: orange;\" else \"border-color: red;\"\n               )),\n        column(3,\n               wellPanel(textOutput(\"wp4.t\"),\n                         plotOutput(\"wp4.p\", height = \"150px\"),\n                         style = if (voc[4,6] >= 9) \"border-color: green;\" else if \n                         (voc[4,6] >= 5 &  voc[4,6]< 9) \"border-color: orange;\" else \"border-color: red;\"\n               ))\n        \n        \n        ),\n        \n        # Row 2\n        fluidRow(\n          column(3,\n                 wellPanel(\"5\"\n                 )),\n          column(3,\n                 wellPanel(\"6\"\n                 )),\n          column(3,\n                 wellPanel(\"7\"\n                 )),\n          column(3,\n                 wellPanel(\"8\"\n                 ))\n        ),\n        \n        # Row 3\n        fluidRow(\n          column(3,\n                 wellPanel(\"9\"\n                 )),\n          column(3,\n                 wellPanel(\"10\"\n                 )),\n          column(3,\n                 wellPanel(\"11\"\n                 )),\n          column(3,\n                 wellPanel(\"12\"\n                 ))\n        ),\n        \n        # Row 4\n        fluidRow(\n          column(3,\n                 wellPanel(\"13\"\n                 )),\n          column(3,\n                 wellPanel(\"14\"\n                 )),\n          column(3,\n                 wellPanel(\"15\"\n                 )),\n          column(3,\n                 wellPanel(\"16\"\n                 ))\n        )\n        \n        \n        \n        \n        \n        \n        \n        \n        \n        ))",
+    "created" : 1432139309311.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1585543282",
+    "id" : "62FD2303",
+    "lastKnownWriteTime" : 1432144355,
+    "path" : "~/GitHub/VoCComments/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

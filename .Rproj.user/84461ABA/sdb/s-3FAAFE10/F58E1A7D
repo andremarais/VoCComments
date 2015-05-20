@@ -1,0 +1,17 @@
+{
+    "contents" : "voc.path <- list.files(file.path(getwd(), \"data\"), pattern = \".csv\")\n\nvoc <- read.csv(file.path(getwd(), \"data\", voc.path))\n\nsource(\"www/scoreplot.R\", local = T)\n\n\nshinyServer(function(input, output) {\n  \n  output$wp1.t <- renderText(as.character(voc[1,7]))\n  output$wp1.p <- renderPlot(score.plot(voc[1,]))\n  \n  output$wp2.t <- renderText(as.character(voc[2,7]))\n  output$wp2.p <- renderPlot(score.plot(voc[2,]))\n  \n  output$wp3.t <- renderText(as.character(voc[3,7]))\n  output$wp3.p <- renderPlot(score.plot(voc[3,]))\n  \n  output$wp4.t <- renderText(as.character(voc[4,7]))\n  output$wp4.p <- renderPlot(score.plot(voc[4,]))\n\n  \n  \n  \n  \n  \n})",
+    "created" : 1432139309650.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4214915642",
+    "id" : "F58E1A7D",
+    "lastKnownWriteTime" : 1432144355,
+    "path" : "~/GitHub/VoCComments/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
