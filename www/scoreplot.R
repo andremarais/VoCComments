@@ -8,7 +8,7 @@ score.plot <- function(df) {
   p <- ggplot(data = df.score) + 
     geom_bar(aes(x = Metric, y = Score, fill = Score), stat = "identity") + 
     geom_text(aes(x= Metric, y=Score, ymax=Score, label=Score, 
-                 vjust=ifelse(Score>=8, 1.5, -1)), 
+                 vjust=.75), 
              position = position_dodge(width=1),
              size = 6,
              fontface = "bold")+
@@ -17,7 +17,8 @@ score.plot <- function(df) {
           panel.grid.major = element_blank(),
           panel.grid.minor = element_blank(),
           panel.border = element_blank(),
-          panel.background = element_blank(),
+          panel.background = element_rect(fill = "transparent",colour = NA),
+          plot.background = element_rect(fill = "transparent",colour = NA),
           axis.line.x = element_blank(),
           axis.line.y = element_blank(),
           axis.text.y = element_blank(),

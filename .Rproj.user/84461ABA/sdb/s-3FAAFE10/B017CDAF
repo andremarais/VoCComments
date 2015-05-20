@@ -1,12 +1,12 @@
 {
-    "contents" : "score.plot <- function(df) {\n  \n  df.score <- data.frame(t(df[,1:5]))\n  \n  df.score$Metric <- c(letters[1:5])\n  colnames(df.score)[1] <- \"Score\"\n  \n  p <- ggplot(data = df.score) + \n    geom_bar(aes(x = Metric, y = Score, fill = Score), stat = \"identity\") + \n    geom_text(aes(x= Metric, y=Score, ymax=Score, label=Score, \n                 vjust=ifelse(Score>=8, 1.5, -1)), \n             position = position_dodge(width=1),\n             size = 6,\n             fontface = \"bold\")+\n    scale_fill_gradient(low = \"orangered\", high = \"steel blue\") +\n    theme(axis.line = element_line(colour = \"black\"),\n          panel.grid.major = element_blank(),\n          panel.grid.minor = element_blank(),\n          panel.border = element_blank(),\n          panel.background = element_blank(),\n          axis.line.x = element_blank(),\n          axis.line.y = element_blank(),\n          axis.text.y = element_blank(),\n          axis.ticks.y = element_blank(),\n          axis.title.y = element_blank(),\n          axis.text.y = element_blank(),\n          legend.position = \"none\")+\n    xlab(paste(\"Overall score:\", df[,6]))\n    \n  return(p)\n  \n}\n\n\n",
+    "contents" : "score.plot <- function(df) {\n  \n  df.score <- data.frame(t(df[,1:5]))\n  \n  df.score$Metric <- c(letters[1:5])\n  colnames(df.score)[1] <- \"Score\"\n  \n  p <- ggplot(data = df.score) + \n    geom_bar(aes(x = Metric, y = Score, fill = Score), stat = \"identity\") + \n    geom_text(aes(x= Metric, y=Score, ymax=Score, label=Score, \n                 vjust=.75), \n             position = position_dodge(width=1),\n             size = 6,\n             fontface = \"bold\")+\n    scale_fill_gradient(low = \"orangered\", high = \"steel blue\") +\n    theme(axis.line = element_line(colour = \"black\"),\n          panel.grid.major = element_blank(),\n          panel.grid.minor = element_blank(),\n          panel.border = element_blank(),\n          panel.background = element_rect(fill = \"transparent\",colour = NA),\n          plot.background = element_rect(fill = \"transparent\",colour = NA),\n          axis.line.x = element_blank(),\n          axis.line.y = element_blank(),\n          axis.text.y = element_blank(),\n          axis.ticks.y = element_blank(),\n          axis.title.y = element_blank(),\n          axis.text.y = element_blank(),\n          legend.position = \"none\")+\n    xlab(paste(\"Overall score:\", df[,6]))\n    \n  return(p)\n  \n}\n\n\n",
     "created" : 1432140904525.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1928361737",
+    "hash" : "1581272666",
     "id" : "B017CDAF",
-    "lastKnownWriteTime" : 1432144680,
+    "lastKnownWriteTime" : 1432150902,
     "path" : "~/GitHub/VoCComments/www/scoreplot.R",
     "project_path" : "www/scoreplot.R",
     "properties" : {
